@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+
+    <fontFamily name="NotoSansEnglish">
+        <!-- English Regular -->
+        <normal><![CDATA[fonts/noto/NotoSans-Regular.ttf]]></normal>
+        <!-- English Bold -->
+        <bold><![CDATA[fonts/noto/NotoSans-Bold.ttf]]></bold>
+        <!-- English Italic -->
+        <italic><![CDATA[fonts/noto/NotoSans-Italic.ttf]]></italic>
+        <!-- English Bold Italic -->
+        <boldItalic><![CDATA[fonts/noto/NotoSans-BoldItalic.ttf]]></boldItalic>
+
+        <!-- Unicode PDF Support -->
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+    </fontFamily>
+
+    <fontFamily name="NotoSansHindi">
+        <!-- Gujarati Regular -->
+        <normal><![CDATA[fonts/noto/NotoSansDevanagari-Regular.ttf]]></normal>
+        <!-- Gujarati Bold -->
+        <bold><![CDATA[fonts/noto/NotoSansDevanagari-Bold.ttf]]></bold>
+
+        <!-- Unicode PDF Support -->
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+    </fontFamily>
+
+    <fontFamily name="NotoSansGujarati">
+        <!-- Gujarati Regular -->
+        <normal><![CDATA[fonts/noto/NotoSansGujarati-Regular.ttf]]></normal>
+        <!-- Gujarati Bold -->
+        <bold><![CDATA[fonts/noto/NotoSansGujarati-Bold.ttf]]></bold>
+
+        <!-- Unicode PDF Support -->
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+    </fontFamily>
+
+</fontFamilies>

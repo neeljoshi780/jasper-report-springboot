@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_master" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="49e1e464-b382-4350-b322-41c57a211ccf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="P_LABEL_PARTY_NAME" class="java.lang.String"/>
+	<parameter name="P_LABEL_MOBILE_NO" class="java.lang.String"/>
+	<parameter name="P_LABEL_EVENT_DATE" class="java.lang.String"/>
+	<parameter name="P_LABEL_EVENT_TIME" class="java.lang.String"/>
+	<parameter name="P_LABEL_VENUE" class="java.lang.String"/>
+	<parameter name="BG1" class="java.lang.String"/>
+	<parameter name="BG2" class="java.lang.String"/>
+	<parameter name="BG3" class="java.lang.String"/>
+	<parameter name="BG4" class="java.lang.String"/>
+	<parameter name="BG5" class="java.lang.String"/>
+	<parameter name="VECTOR1" class="java.lang.String"/>
+	<parameter name="VECTOR2" class="java.lang.String"/>
+	<parameter name="VECTOR3" class="java.lang.String"/>
+	<parameter name="PARTY_DETAILS_DS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="MENU_DETAILS_DS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="P_LABEL_START_EVENT_DATE" class="java.lang.String"/>
+	<parameter name="P_LABEL_START_EVENT_TIME" class="java.lang.String"/>
+	<parameter name="P_LABEL_DRINKS" class="java.lang.String"/>
+	<parameter name="P_LABEL_BITES" class="java.lang.String"/>
+	<parameter name="P_LABEL_LUNCH" class="java.lang.String"/>
+	<parameter name="OWNER_DETAILS_DS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="240" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="595" height="40" uuid="d90f6418-92d6-4a32-ae53-a6eff0eea3f1"/>
+				<subreportParameter name="BG1">
+					<subreportParameterExpression><![CDATA[$P{BG1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_cover.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="40" width="595" height="40" uuid="513cc775-4a9d-4dd5-bfba-fa9e77eed3f1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="BG2">
+					<subreportParameterExpression><![CDATA[$P{BG2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_intro.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="80" width="595" height="40" uuid="e9933494-cf92-4f74-870e-8f8c6b5ad299"/>
+				<subreportParameter name="VECTOR2">
+					<subreportParameterExpression><![CDATA[$P{VECTOR2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VECTOR1">
+					<subreportParameterExpression><![CDATA[$P{VECTOR1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VECTOR3">
+					<subreportParameterExpression><![CDATA[$P{VECTOR3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BG3">
+					<subreportParameterExpression><![CDATA[$P{BG3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_PARTY_NAME">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_PARTY_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_MOBILE_NO">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_MOBILE_NO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_EVENT_DATE">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_EVENT_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_EVENT_TIME">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_EVENT_TIME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_VENUE">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_VENUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{PARTY_DETAILS_DS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_party.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="120" width="595" height="40" uuid="8b40d945-a467-4711-ab34-8db0fd8db3b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="P_LABEL_START_EVENT_DATE">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_START_EVENT_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_START_EVENT_TIME">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_START_EVENT_TIME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_DRINKS">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_DRINKS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_BITES">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_BITES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_LABEL_LUNCH">
+					<subreportParameterExpression><![CDATA[$P{P_LABEL_LUNCH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BG3">
+					<subreportParameterExpression><![CDATA[$P{BG3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VECTOR2">
+					<subreportParameterExpression><![CDATA[$P{VECTOR2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VECTOR3">
+					<subreportParameterExpression><![CDATA[$P{VECTOR3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{MENU_DETAILS_DS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_menu.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="160" width="595" height="40" uuid="11b0e588-e183-45a9-bcd9-3bc47f6fa703">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="BG4">
+					<subreportParameterExpression><![CDATA[$P{BG4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_rules.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="200" width="595" height="40" uuid="26c8ea45-3043-4432-b2bc-3d867a02718c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="BG5">
+					<subreportParameterExpression><![CDATA[$P{BG5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{OWNER_DETAILS_DS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/cater_report_services.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
