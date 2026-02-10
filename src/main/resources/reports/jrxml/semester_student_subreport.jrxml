@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="semester_student_subreport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0b4db72e-ecfa-4aab-9997-a2f83874e0ad">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="semester" class="java.lang.String"/>
+	<field name="studentName" class="java.lang.String"/>
+	<group name="SemesterGroup">
+		<groupExpression><![CDATA[$F{semester}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField>
+					<reportElement x="80" y="0" width="400" height="35" uuid="e5c270fb-cf91-4f15-962b-77aa1282c609">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Semester : " + $F{semester}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="80" y="30" width="400" height="1" uuid="d41fba56-0b05-4e27-801c-2dece97b5f40">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="60" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="60" uuid="f2ce2a31-1b76-40a9-bdfc-edf178ab437d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="60" uuid="7ef1814a-102f-4ec2-8852-6762c51c8234"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Semester Wise Student Report]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="80" y="3" width="400" height="20" uuid="42767d18-abdd-4515-8978-b9624339532f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

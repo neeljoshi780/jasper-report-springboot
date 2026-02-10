@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cater_report_menu" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d9f89524-b668-4ec9-a03d-14df7c386534">
+	<parameter name="BG3" class="java.lang.String"/>
+	<parameter name="VECTOR2" class="java.lang.String"/>
+	<parameter name="VECTOR3" class="java.lang.String"/>
+	<parameter name="P_LABEL_START_EVENT_DATE" class="java.lang.String"/>
+	<parameter name="P_LABEL_START_EVENT_TIME" class="java.lang.String"/>
+	<parameter name="P_LABEL_DRINKS" class="java.lang.String"/>
+	<parameter name="P_LABEL_BITES" class="java.lang.String"/>
+	<parameter name="P_LABEL_LUNCH" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="sectionTitle" class="java.lang.String"/>
+	<field name="startDate" class="java.time.LocalDate"/>
+	<field name="startTime" class="java.lang.String"/>
+	<field name="drinks" class="java.lang.String"/>
+	<field name="bites" class="java.lang.String"/>
+	<field name="lunch" class="java.lang.String"/>
+	<group name="MENU_SECTION_GROUP" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="142"/>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="842" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="0" y="0" width="595" height="842" uuid="b2ad85fc-2cb5-4e72-a4bc-cc2183c77317"/>
+				<imageExpression><![CDATA[$P{BG3}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="700" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="140" y="-42" width="320" height="42" uuid="2b8b8744-6708-4a07-a0c2-2456f2729ce4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR2}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="90" y="49" width="180" height="10" uuid="e1742f54-287b-4c60-8b21-b1f53f33a6c2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="330" y="49" width="180" height="10" uuid="6105a363-b9e2-43bd-8494-b344d299f272">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="90" y="39" width="190" height="30" forecolor="#D0A351" uuid="af5b9ef1-363a-4d7c-aecc-7a33a6afe850">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_START_EVENT_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="39" width="190" height="30" forecolor="#D0A351" uuid="b90a8996-7582-4fe6-b987-d2bf0323c111">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_START_EVENT_TIME}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="180" y="139" width="240" height="10" uuid="41fb47d4-0f39-49c0-841a-695d9b7745ab">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="200" y="160" width="200" height="30" uuid="eb79920e-f142-4467-8e23-d953280d773b"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drinks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="130" width="200" height="30" forecolor="#D0A351" uuid="f97b7dc6-29af-4395-9a04-7145676c53a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_DRINKS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="67" width="190" height="30" uuid="5f3bd885-407b-4bbe-a18e-0dd9be887daa"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="67" width="190" height="30" uuid="c4e70c7e-aac9-4915-8aac-8d8cf9ae1e04"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{startTime}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="180" y="229" width="240" height="10" uuid="1e6098ed-7b97-4d63-9d57-e8a43c98e809">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="200" y="220" width="200" height="30" forecolor="#D0A351" uuid="733b2a05-1e11-45f7-a6aa-360cc7e009cc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_BITES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="250" width="200" height="30" uuid="21ea7a84-5062-4775-b2c4-a2a174d5e4dd"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bites}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="180" y="319" width="240" height="10" uuid="620e742e-d0a0-4f11-8892-fdf29d5094dd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="200" y="310" width="200" height="30" forecolor="#D0A351" uuid="15ed5655-9806-4123-99c3-150ab61f6d03">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_LUNCH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="340" width="200" height="30" uuid="17b68863-d027-4cd1-8439-2ab7d92b7854"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lunch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="-42" width="320" height="42" forecolor="#FFFFFF" uuid="7b594b67-a11b-4260-b011-31e1ebaaefe4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sectionTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

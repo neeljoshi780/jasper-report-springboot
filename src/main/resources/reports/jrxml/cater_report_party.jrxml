@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cater_report_party" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1b54755e-b1e0-48ed-8bb9-52d14f025a3e">
+	<parameter name="P_LABEL_PARTY_NAME" class="java.lang.String"/>
+	<parameter name="P_LABEL_MOBILE_NO" class="java.lang.String"/>
+	<parameter name="P_LABEL_EVENT_DATE" class="java.lang.String"/>
+	<parameter name="P_LABEL_EVENT_TIME" class="java.lang.String"/>
+	<parameter name="P_LABEL_VENUE" class="java.lang.String"/>
+	<parameter name="VECTOR1" class="java.lang.String"/>
+	<parameter name="VECTOR2" class="java.lang.String"/>
+	<parameter name="VECTOR3" class="java.lang.String"/>
+	<parameter name="BG3" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="partyName" class="java.lang.String"/>
+	<field name="mobileNo" class="java.lang.String"/>
+	<field name="eventDate" class="java.time.LocalDate"/>
+	<field name="eventTime" class="java.lang.String"/>
+	<field name="venue" class="java.lang.String"/>
+	<background>
+		<band height="842" splitType="Stretch">
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="0" y="0" width="595" height="842" uuid="9756037c-22de-44a7-ba03-3ad9a56557fe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{BG3}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="842" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="200" y="112" width="200" height="100" uuid="6afd6f1b-1c62-4128-8476-b4311070eb80"/>
+				<imageExpression><![CDATA[$P{VECTOR1}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="180" y="248" width="240" height="42" uuid="ed96afd7-1131-4bfc-8c31-e8c78c3901a8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR2}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="235" y="256" width="129" height="30" forecolor="#FFFFFF" uuid="57448220-84b3-4dec-92d7-26ca6a94b4e9"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Party Details]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement positionType="Float" x="220" y="335" width="160" height="10" uuid="2c084c01-9d54-4b75-82c2-fe0836dc9e07">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{partyName} != null && !$F{partyName}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="Float" x="230" y="327" width="140" height="30" forecolor="#D0A351" uuid="21845da3-2db6-4122-8580-a010ca21e8f1">
+					<printWhenExpression><![CDATA[$F{partyName} != null && !$F{partyName}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_PARTY_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="100" y="354" width="400" height="33" uuid="f0d57fdd-8ad3-4d5f-8fe1-ddebb51cc6d5">
+					<printWhenExpression><![CDATA[$F{partyName} != null && !$F{partyName}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{partyName}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="221" y="414" width="160" height="10" uuid="b7fc6db6-d2be-4a92-8f7a-98e3cf57037d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{mobileNo} != null && !$F{mobileNo}.trim().isBlank()]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="230" y="404" width="140" height="30" forecolor="#D0A351" uuid="8bbd76db-247d-44a7-a489-0285610819cc">
+					<printWhenExpression><![CDATA[$F{mobileNo} != null && !$F{mobileNo}.trim().isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_MOBILE_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="431" width="400" height="33" uuid="1a258263-aa29-4382-a1d3-3b8a1ec500cf">
+					<printWhenExpression><![CDATA[$F{mobileNo} != null && !$F{mobileNo}.trim().isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobileNo}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="220" y="485" width="160" height="10" uuid="0554ea5a-dbcc-46dd-baef-d6df69abf3f4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{eventDate} != null]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="230" y="476" width="140" height="30" forecolor="#D0A351" uuid="dea823a6-79f5-4cea-b1bf-571ce83049bd">
+					<printWhenExpression><![CDATA[$F{eventDate} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_EVENT_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="503" width="400" height="33" uuid="1c25ac71-dbf4-49b3-b96b-213d9b2d738e">
+					<printWhenExpression><![CDATA[$F{eventDate} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eventDate}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="220" y="556" width="160" height="10" uuid="bea2c974-2635-4d47-9185-39f1ba16f9d7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{eventTime} != null && !$F{eventTime}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="230" y="546" width="140" height="30" forecolor="#D0A351" uuid="f036e2de-f00e-43d1-9e2e-23883b9f46a3">
+					<printWhenExpression><![CDATA[$F{eventTime} != null && !$F{eventTime}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_EVENT_TIME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="573" width="400" height="33" uuid="da9b5154-78cd-42bb-832f-68a7490981e8">
+					<printWhenExpression><![CDATA[$F{eventTime} != null && !$F{eventTime}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eventTime}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="220" y="621" width="160" height="10" uuid="25fde4b8-87c4-4df6-b6e1-bb9350ae9d08">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{venue} != null && !$F{venue}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{VECTOR3}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="230" y="612" width="140" height="30" forecolor="#D0A351" uuid="a3d109e3-469d-4fa3-8c17-071b0d602615">
+					<printWhenExpression><![CDATA[$F{venue} != null && !$F{venue}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_LABEL_VENUE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="639" width="400" height="61" uuid="9c8a1973-ef7a-4848-a65d-e37ead1f79b6">
+					<printWhenExpression><![CDATA[$F{venue} != null && !$F{venue}.isBlank()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{venue}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

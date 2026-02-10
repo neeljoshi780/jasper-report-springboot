@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employee_i18n_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" resourceBundle="i18n.messages" uuid="31e2ac6c-741d-4cce-b5a0-ac7055b4686b">
+	<style name="UniversalFont" fontName="NotoSansEnglish" pdfEncoding="Identity-H (Unicode with horizontal writing)">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$P{LANG}.equals("hi")]]></conditionExpression>
+			<style fontName="NotoSansHindi" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$P{LANG}.equals("gu")]]></conditionExpression>
+			<style fontName="NotoSansGujarati" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="LANG" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="60" uuid="f037acbe-9a50-4d92-8a8e-32a0277594c8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="UniversalFont" x="0" y="0" width="555" height="60" uuid="285a54d5-ef05-4bd0-856c-e3845bfb4b8f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="18" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{report.title}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="UniversalFont" x="0" y="0" width="280" height="30" uuid="a2b7c675-5bd3-47ca-a64c-0f0cb5b6adb8"/>
+				<textElement>
+					<font size="12" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{col.name} + ": " + $F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="UniversalFont" x="0" y="30" width="280" height="30" uuid="b72d9dd3-c5a0-4794-94a0-00adb69fb48a"/>
+				<textElement>
+					<font size="12" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{col.department} + ": " + $F{department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="UniversalFont" x="0" y="60" width="280" height="30" uuid="02f7dce5-7bda-4856-94d3-de5a9efd90ee"/>
+				<textElement>
+					<font size="12" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{col.salary} + ": " +  $F{salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="ffb0b5a3-f8cd-46da-b6a4-fd718fa71483">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField>
+					<reportElement style="UniversalFont" x="430" y="0" width="125" height="20" uuid="5c8346fa-8c96-46f8-abbf-837a6c80d595">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{footer.page} + " " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>
